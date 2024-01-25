@@ -37,7 +37,9 @@ public class MercadoPagoService {
     PreferenceRequest request = PreferenceRequest.builder().items(items).build();
 
     try {
+
       return preferenceClient.create(request);
+
     } catch (MPApiException ex) {
       System.out.printf(
           "MercadoPago Error. Status: %s, Content: %s%n",
