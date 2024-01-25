@@ -18,7 +18,7 @@ public class MercadoPagoController {
   private MercadoPagoService mercadoPagoService;
 
   @GetMapping("/mp")
-  public String getAllSells(){
+  public String getCheckoutUrl(){
     // Returns the mercado pago checkout url
     return mercadoPagoService.createPreference("100.00").getInitPoint();
   }
